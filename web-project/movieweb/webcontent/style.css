@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7; /* B站灰 */
+}
+
+/* ===== 顶部导航 ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.logo {
+    color: #00a1d6; /* B站蓝 */
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* 右侧 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 搜索框 */
+.nav-right input {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+/* 小按钮 */
+.nav-btn {
+    padding: 5px 12px;
+    font-size: 13px;
+    background-color: #e3f2fd;
+    border: none;
+    border-radius: 15px;
+    color: #0077aa;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #00a1d6;
+    color: white;
+}
+
+/* ===== 内容区（核心）===== */
+.container {
+    max-width: 1000px;
+    margin: 100px auto 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* 标题 */
+.section-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* 分类 */
+.categories {
+    margin-bottom: 20px;
+}
+
+.categories button {
+    margin-right: 10px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background-color: #00a1d6;
+    color: white;
+}
+
+/* ===== 卡片布局 ===== */
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* 卡片 */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.2s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 图片 */
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* 内容 */
+.card-content {
+    padding: 10px;
+}
+
+.card h3 {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.card p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* 评分 */
+.rating {
+    color: #ff9900;
+}
+
+/* 按钮 */
+.btn {
+    margin-top: 8px;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a1d6;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0088bb;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+/* 超链接去样式 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 详情页布局 */
+.detail-box {
+    display: flex;
+    gap: 20px;
+}
+
+.detail-box img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.detail-info {
+    flex: 1;
+}
+
+.btn.secondary {
+    background-color: #555;
+}
