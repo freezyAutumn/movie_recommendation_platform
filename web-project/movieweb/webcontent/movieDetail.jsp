@@ -3,7 +3,6 @@
 <%
     String title = request.getParameter("title");
 %>
-#底部
 <html>
 <head>
     <title>Movie Detail</title>
