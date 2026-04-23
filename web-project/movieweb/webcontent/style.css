@@ -1,187 +1,86 @@
-body {
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f5f7; /* B站灰 */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5; 
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #ffffff;
+    background: #fff;
+    padding: 15px 5%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
-    border-bottom: 1px solid #ddd;
-    z-index: 1000;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo {
-    color: #00a1d6; /* B站蓝 */
-    font-size: 22px;
+.navbar .logo {
+    color: #00a1d6;
+    font-size: 24px;
     font-weight: bold;
 }
 
-/* 右侧 */
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* 搜索框 */
-.nav-right input {
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
-
-/* 小按钮 */
-.nav-btn {
-    padding: 5px 12px;
-    font-size: 13px;
-    background-color: #e3f2fd;
-    border: none;
-    border-radius: 15px;
-    color: #0077aa;
-    cursor: pointer;
-}
-
-.nav-btn:hover {
-    background-color: #00a1d6;
-    color: white;
-}
-
-/* ===== 内容区（核心）===== */
 .container {
-    max-width: 1000px;
-    margin: 100px auto 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* 标题 */
-.section-title {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-/* 分类 */
-.categories {
-    margin-bottom: 20px;
-}
-
-.categories button {
-    margin-right: 10px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-}
-
-.categories button:hover {
-    background-color: #00a1d6;
-    color: white;
-}
-
-/* ===== 卡片布局 ===== */
 .movie-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
 }
 
-/* 卡片 */
+.movie-list a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .card {
-    background-color: #fff;
-    border-radius: 8px;
+    background: #fff;
+    border-radius: 12px;
     overflow: hidden;
-    transition: 0.2s;
-    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
 
-/* 图片 */
 .card img {
     width: 100%;
-    height: 240px;
-    object-fit: cover;
+    height: 280px;
+    object-fit: cover; 
+    display: block;
 }
 
-/* 内容 */
 .card-content {
-    padding: 10px;
+    padding: 15px;
 }
 
-.card h3 {
-    margin: 5px 0;
-    font-size: 15px;
-    color: #333;
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.card p {
-    font-size: 12px;
-    color: #777;
-}
-
-/* 评分 */
 .rating {
-    color: #ff9900;
+    color: #ffa500;
+    font-weight: bold;
 }
 
-/* 按钮 */
-.btn {
-    margin-top: 8px;
-    width: 100%;
-    padding: 6px;
-    border: none;
-    border-radius: 5px;
-    background-color: #00a1d6;
-    color: white;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0088bb;
-}
-
-/* 页脚 */
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: #888;
-}
-/* 超链接去样式 */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* 详情页布局 */
-.detail-box {
+.login-body {
     display: flex;
-    gap: 20px;
-}
-
-.detail-box img {
-    width: 300px;
-    border-radius: 10px;
-}
-
-.detail-info {
-    flex: 1;
-}
-
-.btn.secondary {
-    background-color: #555;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7f9 0%, #e3f2fd 100%);
 }
